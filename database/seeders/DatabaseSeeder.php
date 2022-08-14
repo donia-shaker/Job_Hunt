@@ -22,7 +22,10 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call(CompaniesSeeder::class);
-        $this->call(JobsSeeder::class);
         $this->call(CitiesSeeder::class);
+        $this->call(JobsSeeder::class);
+        $this->call(UserSeeder::class);
+        $this->call(UserProfileSeeder::class);
+        $this->call(UserJobsSeeder::class);
     }
 }

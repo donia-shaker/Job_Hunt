@@ -21,7 +21,7 @@ class JobsSeeder extends Seeder
                 'ar' => 'مصمم جرافكس',
                 'en' => 'Junior Digital Graphic Designer'
             ],
-            'detailes' => [
+            'details' => [
                 'ar' => '<div class="description my-5 lh-base">
                 <div class="container text-start" style="max-width: 800px">
                   <h2>Job Description</h2>
@@ -167,7 +167,7 @@ class JobsSeeder extends Seeder
             ],
             'start_date' =>  Carbon::create('2022', '06', '11'),
             'end_date' =>  Carbon::create('2023', '06', '18'),
-            'city' => 'Aden',
+            'city_id' => 3,
             'company_id' => 1
         ]);
 
@@ -176,8 +176,7 @@ class JobsSeeder extends Seeder
                 'ar' => 'Finance Manager & Health',
                 'en' => 'Finance Manager & Health'
             ],
-            'city' => 'Taiz',
-            'detailes' => [
+            'details' => [
                 'ar' => '<div class="description my-5 lh-base">
                 <div class="container text-start" style="max-width: 800px">
                   <h2>Job Description</h2>
@@ -323,6 +322,7 @@ class JobsSeeder extends Seeder
             ],
             'start_date' =>  Carbon::create('2022', '06', '11'),
             'end_date' =>  Carbon::create('2023', '06', '18'),
+            'city_id' => 2,
             'company_id' => 2
         ]);
 
@@ -331,8 +331,7 @@ class JobsSeeder extends Seeder
                 'ar' => 'General Ledger Accountant',
                 'en' => 'General Ledger Accountant'
             ],
-            'city' => 'Taiz',
-            'detailes' => [
+            'details' => [
                 'ar' => '<div class="description my-5 lh-base">
                 <div class="container text-start" style="max-width: 800px">
                   <h2>Job Description</h2>
@@ -478,6 +477,7 @@ class JobsSeeder extends Seeder
             ],
             'start_date' =>  Carbon::create('2022', '06', '11'),
             'end_date' =>  Carbon::create('2023', '06', '18'),
+            'city_id' => 2,
             'company_id'=>3
         ]);
 
@@ -486,8 +486,7 @@ class JobsSeeder extends Seeder
                 'ar' => 'General Ledger Accountant',
                 'en' => 'General Ledger Accountant'
             ],
-            'city' => 'Sanaa',
-            'detailes' => [
+            'details' => [
                 'ar' => '<div class="description my-5 lh-base">
                 <div class="container text-start" style="max-width: 800px">
                   <h2>Job Description</h2>
@@ -633,6 +632,7 @@ class JobsSeeder extends Seeder
             ],
             'start_date' =>  Carbon::create('2022', '06', '11'),
             'end_date' =>  Carbon::create('2023', '06', '18'),
+            'city_id' => 1,
             'company_id' => 3
         ]);
 
@@ -641,8 +641,7 @@ class JobsSeeder extends Seeder
                 'ar' => 'ACB Product Sales Specialist',
                 'en' => 'ACB Product Sales Specialist'
             ],
-            'city' => 'Aden',
-            'detailes' => [
+            'details' => [
                 'ar' => '<div class="description my-5 lh-base">
                 <div class="container text-start" style="max-width: 800px">
                   <h2>Job Description</h2>
@@ -788,6 +787,7 @@ class JobsSeeder extends Seeder
             ],
             'start_date' =>  Carbon::create('2022', '06', '11'),
             'end_date' =>  Carbon::create('2023', '06', '18'),
+            'city_id' => 3,
             'company_id' => 1
         ]);
 
@@ -796,8 +796,7 @@ class JobsSeeder extends Seeder
                 'ar' => 'مصمم جرافكس',
                 'en' => 'Junior Digital Graphic Designer'
             ],
-            'city' => 'Sanaa',
-            'detailes' => [
+            'details' => [
                 'ar' => '<div class="description my-5 lh-base">
                 <div class="container text-start" style="max-width: 800px">
                   <h2>Job Description</h2>
@@ -942,7 +941,8 @@ class JobsSeeder extends Seeder
                 '
             ],
             'start_date' =>  Carbon::create('2022', '06', '11'),
-            'end_date' =>  Carbon::create('2023', '06', '18'),
+            'end_date' =>  Carbon::create('2022', '06', '18'),
+            'city_id' => 1,
             'company_id' => 1
         ]);
 
@@ -951,8 +951,7 @@ class JobsSeeder extends Seeder
                 'ar' => 'Finance Manager & Health',
                 'en' => 'Finance Manager & Health'
             ],
-            'city' => 'Taiz',
-            'detailes' => [
+            'details' => [
                 'ar' => '<div class="description my-5 lh-base">
                 <div class="container text-start" style="max-width: 800px">
                   <h2>Job Description</h2>
@@ -1096,9 +1095,11 @@ class JobsSeeder extends Seeder
                 </div>
                 '
             ],
-            'start_date' =>  Carbon::create('2022', '06', '11'),
-            'end_date' =>  Carbon::create('2023', '06', '18'),
-            'company_id' => 2
+            'start_date' =>  Carbon::create('2021', '11', '11'),
+            'end_date' =>  Carbon::create('2021', '12', '18'),
+            'city_id' => 2,
+            'company_id' => 2,
+            'status'  => 1
         ]);
 
         Jobs::create([
@@ -1106,8 +1107,7 @@ class JobsSeeder extends Seeder
                 'ar' => 'General Ledger Accountant',
                 'en' => 'General Ledger Accountant'
             ],
-            'city' => 'Taiz',
-            'detailes' => [
+            'details' => [
                 'ar' => '<div class="description my-5 lh-base">
                 <div class="container text-start" style="max-width: 800px">
                   <h2>Job Description</h2>
@@ -1251,9 +1251,11 @@ class JobsSeeder extends Seeder
                 </div>
                 '
             ],
-            'start_date' =>  Carbon::create('2022', '06', '11'),
-            'end_date' =>  Carbon::create('2023', '06', '18'),
-            'company_id'=>3
+            'start_date' =>  Carbon::create('2022', '01', '11'),
+            'end_date' =>  Carbon::create('2022', '02', '18'),
+            'city_id' => 2,
+            'company_id'=>3,
+            'status'  => 1
         ]);
 
         Jobs::create([
@@ -1261,8 +1263,7 @@ class JobsSeeder extends Seeder
                 'ar' => 'General Ledger Accountant',
                 'en' => 'General Ledger Accountant'
             ],
-            'city' => 'Sanaa',
-            'detailes' => [
+            'details' => [
                 'ar' => '<div class="description my-5 lh-base">
                 <div class="container text-start" style="max-width: 800px">
                   <h2>Job Description</h2>
@@ -1406,8 +1407,9 @@ class JobsSeeder extends Seeder
                 </div>
                 '
             ],
-            'start_date' =>  Carbon::create('2022', '06', '11'),
-            'end_date' =>  Carbon::create('2023', '06', '18'),
+            'start_date' =>  Carbon::create('2022', '05', '11'),
+            'end_date' =>  Carbon::create('2022', '06', '18'),
+            'city_id' => 1,
             'company_id' => 3
         ]);
     }

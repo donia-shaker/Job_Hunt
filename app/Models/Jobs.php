@@ -17,5 +17,10 @@ class Jobs extends Model
         return $this->belongsTo(Cities::class, 'city_id');
     }
 
-    public $translatable = ['name', 'detailes'];
+    public function company()
+    {
+        return $this->belongsTo(Companies::class, 'company_id');
+    }
+
+    public $translatable = ['name', 'details'];
 }

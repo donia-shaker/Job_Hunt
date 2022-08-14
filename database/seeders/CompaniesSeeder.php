@@ -20,7 +20,7 @@ class CompaniesSeeder extends Seeder
                 'ar' => 'nonstop',
                 'en' => 'nonstop'
             ],
-            'image' => 'job-1.png',
+            'image' => 'job-1.jpg',
             'phone' => '777 777 777',
             'address'=>[
                 'ar' => 'العنوان',
@@ -33,7 +33,7 @@ class CompaniesSeeder extends Seeder
                 'ar' => 'mencap',
                 'en' => 'mencap'
             ],
-            'image' => 'job-2.png',
+            'image' => 'job-2.jpg',
             'phone' => '777 777 777',
             'address'=>[
                 'ar' => 'العنوان',
@@ -46,7 +46,7 @@ class CompaniesSeeder extends Seeder
                 'ar' => 'mencap',
                 'en' => 'mencap'
             ],
-            'image' => 'job-3.png',
+            'image' => 'job-3.jpg',
             'phone' => '777 777 777',
             'address'=>[
                 'ar' => 'العنوان',
@@ -59,7 +59,7 @@ class CompaniesSeeder extends Seeder
                 'ar' => 'مايكروسوفت',
                 'en' => 'microsoft'
             ],
-            'image' => 'job-1.png',
+            'image' => 'job-1.jpg',
             'phone' => '777 777 777',
             'address'=>[
                 'ar' => 'العنوان',

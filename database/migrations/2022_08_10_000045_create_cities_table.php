@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('cities', function (Blueprint $table) {
+            $table->id();
             $table->json('name');
             $table->boolean('is_active')->default(1);
-            $table->id();
             $table->timestamps();
         });
     }
