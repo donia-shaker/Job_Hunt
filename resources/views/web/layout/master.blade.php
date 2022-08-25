@@ -40,24 +40,24 @@
                         <a class="nav-link active" aria-current="page" href="{{ route('index') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="all_jobs">Jobs</a>
+                        <a class="nav-link" href="{{route('all_jobs')}}">Jobs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services">Services</a>
+                        <a class="nav-link" href="{{route('services')}}">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about_us">About Us</a>
+                        <a class="nav-link" href="{{route('about_us')}}">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact_us">Contact Us</a>
+                        <a class="nav-link" href="{{route('contact_us')}}">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="membership">Members</a>
+                        <a class="nav-link" href="{{route('partiner')}}">Members</a>
                     </li>
                 </ul>
                 <div class="acount">
-                    <a href="login" class="me-2"><i class="fas fa-sign-in-alt me-2"></i>Login</a>
-                    <a href="register"><i class="fas fa-user"></i> Signup</a>
+                    <a href="{{route('login')}}" class="me-2"><i class="fas fa-sign-in-alt me-2"></i>Login</a>
+                    <a href="{{route('register')}}"><i class="fas fa-user"></i> Signup</a>
                 </div>
                 <!-- profile -->
                 <div class="dropdown mt-4 mx-2 pb-4">

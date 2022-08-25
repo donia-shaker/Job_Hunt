@@ -12,6 +12,7 @@ use App\Http\Controllers\client\EducationController;
 use App\Http\Controllers\client\PersonalInfoController;
 use App\Http\Controllers\client\SkillsController;
 use App\Http\Controllers\web\CVController as WebCVController;
+use App\Http\Controllers\web\ShowPagesController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 /*
@@ -34,37 +35,6 @@ Route::group([
     'prefix' => LaravelLocalization::setLocale(),
     'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
 ], function () {
-
-    // Route::get('/about_us',[ aboutUsController::class,'showPage'])->name('about_us');
-
-    Route::get('/', function () {
-        return view('web.index');
-    })->name('index');
-
-    Route::get('/contact_us', function () {
-        return view('web.contact-us');
-    });
-
-    Route::get('/job_details', function () {
-        return view('web.details');
-    });
-
-
-    Route::get('/all_jobs', function () {
-        return view('web.job');
-    });
-
-    Route::get('/membership', function () {
-        return view('web.membership');
-    });
-
-    Route::get('/services', function () {
-        return view('web.services');
-    });
-
-    Route::get('/about_us', function () {
-        return view('web.about-us');
-    })->name('about_us');
 
     // Login & Register
     Route::controller(AuthController::class)->group(function () {
@@ -135,6 +105,15 @@ Route::group([
         Route::get('/skills/{id}', [SkillsController::class, 'show'])->name('skills');
         Route::get('/courses/{id}', [CoursesController::class, 'show'])->name('courses');
     });
-    Route::get('/cv/{id}', [WebCVController::class, 'show'])->name('cv');
 
+    Route::get('/cv/{id}', [WebCVController::class, 'show'])->name('cv');
+    Route::controller(ShowPagesController::class)->group(function () {
+        Route::get('/', 'showHome')->name('index');
+        Route::get('/all_jobs', 'showJobs')->name('all_jobs');
+        Route::get('/job_details', 'showDetailes')->name('job_details');
+        Route::get('/partiner', 'showPartener')->name('partiner');
+        Route::get('/contact_us', 'showContactUs')->name('contact_us');
+        Route::get('/about_us', 'showAboutUs')->name('about_us');
+        Route::get('/services', 'showServices')->name('services');
+    });
 });

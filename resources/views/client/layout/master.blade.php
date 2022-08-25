@@ -35,7 +35,7 @@
                     <ul class="nav nav-pills my-2 fs-6 flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
                         id="menu">
                         <li class="nav-item my-3">
-                            <a href="index" class="nav-link align-middle text-white px-0">
+                            <a href="{{ route('index') }}" class="nav-link align-middle text-white px-0">
                                 <i class="fas fa-home"></i>
                                 <span class="ms-1 d-none d-sm-inline">Home</span>
                             </a>
