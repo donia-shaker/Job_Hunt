@@ -16,7 +16,7 @@ class UserProfileSeeder extends Seeder
     public function run()
     {
         UserProfile::create([
-            'avatar'     =>'default_image.png',
+            'avatar'     =>'default_image.',
             'phone'     =>'777 777 776',
             'address'   =>'Yemen,Sanaa',
             'user_id'   => 2,

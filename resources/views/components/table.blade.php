@@ -1,5 +1,5 @@
 <div class="container-xxl flex-grow-1 container-p-y">
-    <x-messages></x-messages>
+    <x-messages><x-slot name='type'>info</x-slot></x-messages>
 
     <h4 class="fw-bold py-2 mb-3 fs-2"> {{$tableName}}</h4>
 
