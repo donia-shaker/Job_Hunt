@@ -55,7 +55,6 @@ class CitiesController extends Controller
 
         return redirect()->route('cities')->with([
             'success'   => CRUDMessages::MESSAGE_UPDATE_SUCCESS,
-            'error'     => CRUDMessages::MESSAGE_UPDATE_ERROR
         ]);
     }
 
@@ -68,7 +67,6 @@ class CitiesController extends Controller
         if($cities->save())
         return redirect()->back()->with([
             'success'   => CRUDMessages::MESSAGE_ACTIVE_SUCCESS,
-            'error'     => CRUDMessages::MESSAGE_ACTIVE_ERROR
         ]);
     }
 
@@ -77,7 +75,6 @@ class CitiesController extends Controller
         if ($cities->delete())
         return redirect()->back()->with([
             'success'   => CRUDMessages::MESSAGE_DELETE_SUCCESS,
-            'error'     => CRUDMessages::MESSAGE_DELETE_ERROR
         ]);
     }
 }

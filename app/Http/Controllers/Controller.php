@@ -16,4 +16,11 @@ class Controller extends BaseController
         $filename= date('YmdHi').$file->getClientOriginalName();
         $file->move(public_path('images'), $filename);
         return $filename;
-    }}
+    }
+
+    public function defaultImage($file){
+        $filename= date('YmdHi').$file;
+        $file->move(public_path('images'), $filename);
+        return $filename;
+    }
+}

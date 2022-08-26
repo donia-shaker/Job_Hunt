@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\aboutUsController;
 use App\Http\Controllers\admin\AuthController;
 use App\Http\Controllers\admin\CitiesController;
 use App\Http\Controllers\admin\CompaniesController;
@@ -100,6 +99,8 @@ Route::group([
         // User Personal Information
         Route::controller(PersonalInfoController::class)->group(function () {
             Route::get('/dashboard', 'show')->name('dashboard');
+            Route::post('/add_info', 'store')->name('add_info');
+            Route::post('/update_info', 'update')->name('update_info');
         });
         Route::get('/education/{id}', [EducationController::class, 'show'])->name('education');
         Route::get('/skills/{id}', [SkillsController::class, 'show'])->name('skills');

@@ -47,7 +47,6 @@ class CompaniesController extends Controller
 
         return redirect()->route('companies')->with([
             'success'   => CRUDMessages::MESSAGE_ADD_SUCCESS,
-            'error'     => CRUDMessages::MESSAGE_ADD_ERROR
         ]);
     }
 
@@ -74,7 +73,6 @@ class CompaniesController extends Controller
 
         return redirect()->route('companies')->with([
             'success'   => CRUDMessages::MESSAGE_UPDATE_SUCCESS,
-            'error'     => CRUDMessages::MESSAGE_UPDATE_ERROR
         ]);
     }
 
@@ -87,7 +85,6 @@ class CompaniesController extends Controller
         if($companies->save())
         return redirect()->back()->with([
             'success'   => CRUDMessages::MESSAGE_ACTIVE_SUCCESS,
-            'error'     => CRUDMessages::MESSAGE_ACTIVE_ERROR
         ]);
     }
 
@@ -96,7 +93,6 @@ class CompaniesController extends Controller
         if ($companies->delete())
         return redirect()->back()->with([
             'success'   => CRUDMessages::MESSAGE_DELETE_SUCCESS,
-            'error'     => CRUDMessages::MESSAGE_DELETE_ERROR
         ]);
     }
 }
