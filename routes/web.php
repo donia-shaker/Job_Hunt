@@ -1,11 +1,15 @@
 <?php
 
-use App\Http\Controllers\admin\AuthController;
+// use App\Http\Controllers\admin\AuthController;
 use App\Http\Controllers\admin\CitiesController;
 use App\Http\Controllers\admin\CompaniesController;
 use App\Http\Controllers\admin\jobsController;
 use App\Http\Controllers\admin\UsersController;
 use App\Http\Controllers\admin\UsersJobsController;
+use App\Http\Controllers\Authentication\ActiveUserController;
+use App\Http\Controllers\Authentication\AuthController;
+use App\Http\Controllers\Authentication\ResendEmailController;
+use App\Http\Controllers\Authentication\ResetPasswordController;
 use App\Http\Controllers\client\CoursesController;
 use App\Http\Controllers\client\EducationController;
 use App\Http\Controllers\client\PersonalInfoController;
@@ -42,6 +46,16 @@ Route::group([
         Route::post('/save_user', 'store')->name('save_user');
         Route::post('/login_info', 'login')->name('login_info');
         Route::get('/logout', 'logout')->name('logout');
+    });
+
+    // All Email Routes
+    Route::get('/active_user/{token}/{password}',[ActiveUserController::class,'activeUser'])->name('active_user');;
+    Route::post('/resend_email',[ResendEmailController::class,'resendEmail'])->name('resend_email');;
+    Route::controller(ResetPasswordController::class)->group(function () {
+        Route::get('/reset_password', 'show')->name('reset_password');
+        Route::post('/send_email','sendEmail')->name('send_email');;
+        Route::get('/verify_password/{token}','formPassword')->name('verify_password');
+        Route::post('/new_password', 'newPassword')->name('new_password');
     });
 
     Route::group(['middleware' => 'auth'], function () {
