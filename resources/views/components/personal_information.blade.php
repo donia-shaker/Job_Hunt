@@ -20,8 +20,16 @@
             </div>
 
             <div class="mb-4">
+                <label class="form-label fs-6" for="multicol-username">Your Job Name:</label>
+                <input name="job" value="{{$val3}}" type="text" id="multicol-username" class="form-control" />
+                @error('job')
+                    <span class="text-end text-danger">* {{ $message }} </span>
+                @enderror
+            </div>
+
+            <div class="mb-4">
                 <label class="form-label fs-6" for="multicol-username">Your Phone:</label>
-                <input name="phone" value="{{$val3}}" type="text" id="multicol-username" class="form-control" />
+                <input name="phone" value="{{$val4}}" type="text" id="multicol-username" class="form-control" />
                 @error('phone')
                     <span class="text-end text-danger">* {{ $message }} </span>
                 @enderror

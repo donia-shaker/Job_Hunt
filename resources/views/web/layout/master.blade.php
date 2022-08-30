@@ -37,27 +37,27 @@
             <div class="collapse navbar-collapse ms-5" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-2">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('index') }}">Home</a>
+                        <a class="nav-link {{ request()->routeIs('index') ? 'active' : ''}}" aria-current="page" href="{{ route('index') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('all_jobs')}}">Jobs</a>
+                        <a class="nav-link {{ request()->routeIs('all_jobs') ? 'active' : ''}}" href="{{route('all_jobs')}}">Jobs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('services')}}">Services</a>
+                        <a class="nav-link {{ request()->routeIs('services') ? 'active' : ''}}" href="{{route('services')}}">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('about_us')}}">About Us</a>
+                        <a class="nav-link {{ request()->routeIs('about_us') ? 'active' : ''}}" href="{{route('about_us')}}">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('contact_us')}}">Contact Us</a>
+                        <a class="nav-link {{ request()->routeIs('contact_us') ? 'active' : ''}}" href="{{route('contact_us')}}">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('partiner')}}">Members</a>
+                        <a class="nav-link {{ request()->routeIs('partiner') ? 'active' : ''}}" href="{{route('partiner')}}">Members</a>
                     </li>
                 </ul>
                 <div class="acount">
-                    <a href="{{route('login')}}" class="me-2"><i class="fas fa-sign-in-alt me-2"></i>Login</a>
-                    <a href="{{route('register')}}"><i class="fas fa-user"></i> Signup</a>
+                    <a href="{{route('login')}}" class="me-2 {{ request()->routeIs('login') ? 'active' : 'text-white'}}"><i class="fas fa-sign-in-alt me-2"></i>Login</a>
+                    <a href="{{route('register')}}" class=" me-2 {{ request()->routeIs('register') ? 'active' : 'text-white'}}"><i class="fas fa-user"></i> Signup</a>
                 </div>
                 <!-- profile -->
                 <div class="dropdown mt-4 mx-2 pb-4">

@@ -25,6 +25,7 @@ class PersonalInformationRequest extends FormRequest
     {
         return [
             'name' => 'required|string|min:3|max:100',
+            'job' => 'required|string|min:3|max:100',
             'address' => 'required|string|min:3|max:100',
             'phone' => 'required|min:9',
             'image' => 'image',

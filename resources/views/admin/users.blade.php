@@ -3,9 +3,9 @@
     <x-table>
         <x-slot name='tableName'>المستخدمين</x-slot>
         <x-slot name='button'>
-                <button type="button" class="btn text-white p-2 my-3 w-25" style="background-color:rgb(5 44 101) !important;">
-                    عدد  المستخدمين : {{ $count }}
-                </button>
+            <button type="button" class="btn text-white p-2 my-3 w-25" style="background-color:rgb(5 44 101) !important;">
+                عدد المستخدمين : {{ $count }}
+            </button>
         </x-slot>
         <x-slot name='tableHead'>
             <th> الاسم </th>
@@ -19,7 +19,12 @@
                 <tr>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
-                    <td><a href="" class="text-info">انقر لعرض المزيد</a></td>
+                    <?php $profile = App\Models\UserProfile::where('user_id', $user->id)->count(); ?>
+                    @if ($profile)
+                        <td><a href="{{ route('cv', $user->id) }}" class="text-info">انقر لعرض المزيد</a></td>
+                    @else
+                        <td class="text-danger">هذا المستخدم لا يمتلك بروفايل</td>
+                    @endif
                     <td>
                         @if ($user->is_active)
                             <span class="badge bg-label-info me-1">مفعل</span>
@@ -30,16 +35,16 @@
                     <td>
                         @if ($user->is_active)
                             <a class="btn btn-icon text-info btn-outline-info mx-1 " data-bs-toggle="modal"
-                                data-bs-target="#activeModal{{$user->id}}">
+                                data-bs-target="#activeModal{{ $user->id }}">
                                 <i class="bx bx-show"></i>
                             </a>
                         @else
                             <a class="btn btn-icon btn-outline-secondary mx-1 " data-bs-toggle="modal"
-                                data-bs-target="#activeModal{{$user->id}}">
+                                data-bs-target="#activeModal{{ $user->id }}">
                                 <i class="bx bx-hide "></i>
                             </a>
                         @endif
-                        <x-modal id='activeModal{{$user->id}}'>
+                        <x-modal id='activeModal{{ $user->id }}'>
                             <x-slot name='title'>حالة المستخدم</x-slot>
                             <x-slot name='message'>هل انت متاكد انك تريد تغيير حالة المستخدم</x-slot>
                             <x-slot name='link'>{{ route('active_user', $user->id) }}</x-slot>

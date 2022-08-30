@@ -19,14 +19,15 @@
     <main class="d-flex align-items-center flex-column flex-md-row justify-content-evenly">
         <div class="text-center mx-2 ">
 
-            <h3 class="text-center h2 fw-bold my-4 mb-5 pb-5"> Your New Password</h1>
+            <h3 class="text-center h2 fw-bold my-4 mb-5 pb-3"> Your New Password</h1>
 
 
-                <div class="mt-5">
-                    <form action="{{route('new_password')}}" method="POST" class="mt-5">
+                <div class="mt-3">
+                    <form action="{{route('new_password')}}" method="POST" class="mt-5 " style="width: 350px;
+                    text-align: start;">
                         @csrf
                         <input type="hidden" name="id" value="{{$userInfo->id}}">
-                        <div class="d-flex flex-row align-items-center mt-5">
+                        <div class="d-flex flex-row align-items-center mt-3 mb-3">
                             <i class="fas fa-envelope fa-lg me-2 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
                                 <label class="form-label" for="form3Example4c">Email</label>
@@ -38,7 +39,7 @@
                             @enderror
                         </div>
 
-                        <div class="d-flex flex-row align-items-center mb-2">
+                        <div class="d-flex flex-row align-items-center mb-3">
                             <i class="fas fa-lock fa-lg me-2 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
                                 <label class="form-label" for="form3Example4c">Password</label>
@@ -50,7 +51,7 @@
                             @enderror
                         </div>
 
-                        <div class="d-flex flex-row align-items-center mb-2">
+                        <div class="d-flex flex-row align-items-center mb-3">
                             <i class="fas fa-key fa-lg me-2 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
                                 <label class="form-label" for="form3Example4cd">Repeat your password</label>
@@ -67,8 +68,8 @@
                 </div>
         </div>
 
-        <div class=" mb-5 d-none d-md-flex">
-            <img src="{{ asset('images/reset_password.png') }}" alt="resend_email" class="w-75 ">
+        <div class=" mb-5 d-none d-md-block " style="width: 40%">
+            <img src="{{ asset('images/reset_password.png') }}" alt="resend_email" class="w-100 ">
         </div>
     </main>
     <!-- End Footer -->

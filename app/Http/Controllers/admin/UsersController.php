@@ -7,19 +7,18 @@ use App\Http\Controllers\Enum\CRUDMessages;
 use App\Models\User;
 use App\Models\UserProfile;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
 
 class UsersController extends Controller
 {
 
     public function show(){
         $users=User::get();
+        $userProfile=UserProfile::get();
         $count=User::count();
         return view('admin.users',[
-            'users' =>  $users,
-            'count' =>  $count
+            'users'         =>  $users,
+            'userProfile'   =>  $userProfile,
+            'count'         =>  $count
         ]);
     }
 

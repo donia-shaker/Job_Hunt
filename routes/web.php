@@ -14,6 +14,7 @@ use App\Http\Controllers\client\CoursesController;
 use App\Http\Controllers\client\EducationController;
 use App\Http\Controllers\client\PersonalInfoController;
 use App\Http\Controllers\client\SkillsController;
+use App\Http\Controllers\web\ApplyJobController;
 use App\Http\Controllers\web\CVController as WebCVController;
 use App\Http\Controllers\web\ShowPagesController;
 use Illuminate\Support\Facades\Route;
@@ -125,10 +126,12 @@ Route::group([
     Route::controller(ShowPagesController::class)->group(function () {
         Route::get('/', 'showHome')->name('index');
         Route::get('/all_jobs', 'showJobs')->name('all_jobs');
-        Route::get('/job_details', 'showDetailes')->name('job_details');
+        Route::get('/job_details/{id}', 'showDetailes')->name('job_details');
         Route::get('/partiner', 'showPartener')->name('partiner');
         Route::get('/contact_us', 'showContactUs')->name('contact_us');
         Route::get('/about_us', 'showAboutUs')->name('about_us');
         Route::get('/services', 'showServices')->name('services');
     });
+    Route::get('/apply_job/{id}', [ApplyJobController::class, 'applyJob'])->name('apply_job');
+
 });

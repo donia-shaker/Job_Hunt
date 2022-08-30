@@ -16,28 +16,28 @@ class UserProfileSeeder extends Seeder
     public function run()
     {
         UserProfile::create([
-            'avatar'     =>'default_image.png',
+            'job'       =>'Full Stack Web Developer',
             'phone'     =>'777 777 776',
             'address'   =>'Yemen,Sanaa',
             'user_id'   => 2,
         ]);
 
         UserProfile::create([
-            'avatar'     =>'default_image.png',
+            'job'       =>'Front End Developer',
             'phone'     =>'777 777 775',
             'address'   =>'Yemen,Sanaa',
             'user_id'   => 3,
         ]);
 
         UserProfile::create([
-            'avatar'     =>'default_image.png',
+            'job'       =>'Back End Developer',
             'phone'     =>'777 777 774',
             'address'   =>'Yemen,Sanaa',
             'user_id'   => 4,
         ]);
 
         UserProfile::create([
-            'avatar'     =>'default_image.png',
+            'job'       =>'Full Stack Web Developer',
             'phone'     =>'777 777 773',
             'address'   =>'Yemen,Sanaa',
             'user_id'   => 5,

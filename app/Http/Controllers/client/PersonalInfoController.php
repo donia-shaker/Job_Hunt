@@ -41,6 +41,7 @@ class PersonalInfoController extends Controller
 
         $store = UserProfile::create([
             'address'   =>  $request->address,
+            'job'   =>  $request->job,
             'phone'     =>  $request->phone,
             'avatar'    =>  $image,
             'user_id'   =>  $user_id
@@ -74,6 +75,7 @@ class PersonalInfoController extends Controller
 
         $info = UserProfile::where('user_id', $user_id)->update([
             'address'   =>  $request->address,
+            'job'   =>  $request->job,
             'phone'   =>  $request->phone,
             'avatar'   =>  $image,
             'user_id'   =>  $user_id

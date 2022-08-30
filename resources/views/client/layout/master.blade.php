@@ -35,41 +35,41 @@
                     <ul class="nav nav-pills my-2 fs-6 flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
                         id="menu">
                         <li class="nav-item my-3">
-                            <a href="{{ route('index') }}" class="nav-link align-middle text-white px-0">
+                            <a href="{{ route('index') }}" class="nav-link align-middle px-0 {{ request()->routeIs('index') ? 'active' : 'text-white'}}">
                                 <i class="fas fa-home"></i>
                                 <span class="ms-1 d-none d-sm-inline">Home</span>
                             </a>
                         </li>
                         <li class="w-100 my-3">
-                            <a href="{{ route('dashboard') }}" class="nav-link text-white px-0">
+                            <a href="{{ route('dashboard') }}" class="nav-link px-0 {{ request()->routeIs('dashboard') ? 'second-color' : 'text-white'}}">
                                 <i class="fas fa-user-alt"></i>
                                 <span class="ms-1 d-none d-sm-inline">Personal Information</span>
                             </a>
                         </li>
                         <li class="w-100 my-3">
-                            <a href="{{ route('education',Auth()->user()->id) }}" class="nav-link second-color px-0">
+                            <a href="{{ route('education',Auth()->user()->id) }}" class="nav-link px-0 {{ request()->routeIs('education') ? 'second-color' : 'text-white'}}"">
                                 <i class="fas fa-user-graduate"></i>
                                 <span class="d-none d-sm-inline">Education</span>
                             </a>
                         </li>
                         <li class="w-100 my-3">
-                            <a href="{{route('courses',Auth()->user()->id)}}" class="nav-link text-white px-0">
+                            <a href="{{route('courses',Auth()->user()->id)}}" class="nav-link px-0 {{ request()->routeIs('courses') ? 'second-color' : 'text-white'}}"">
                                 <i class="fas fa-graduation-cap"></i>
                                 <span class="d-none d-sm-inline">Courses</span>
                             </a>
                         </li>
                         <li class="my-3">
-                            <a href=" {{route('skills',Auth()->user()->id)}}" class="nav-link px-0 text-white align-middle">
+                            <a href=" {{route('skills',Auth()->user()->id)}}" class="nav-link px-0 align-middle {{ request()->routeIs('skills') ? 'second-color' : 'text-white'}}"">
                                 <i class="fas fa-puzzle-piece"></i>
                                 <span class="ms-1 d-none d-sm-inline">Skills</span></a>
                         </li>
                         <li class="my-3">
-                            <a href=" {{route('cv',Auth()->user()->id)}}" class="nav-link px-0 text-white align-middle">
+                            <a href=" {{route('cv',Auth()->user()->id)}}" class="nav-link px-0 align-middle {{ request()->routeIs('cv') ? 'second-color' : 'text-white'}}"">
                                 <i class="fas fa-list"></i>
                                 <span class="ms-1 d-none d-sm-inline">CV</span></a>
                         </li>
                         <li class="my-3">
-                            <a href="{{ route('logout') }}" class="nav-link px-0 text-white align-middle">
+                            <a href="{{ route('logout') }}" class="nav-link px-0 align-middle {{ request()->routeIs('logout') ? 'second-color' : 'text-white'}}"">
                                 <i class="fas fa-sign-out-alt"></i>
                                 <span class="ms-1 d-none d-sm-inline">Logout</span></a>
                         </li>

@@ -25,7 +25,7 @@
                     <td>{{ $job->city->name }}</td>
                     <td>{{ $job->start_date }}</td>
                     <td>{{ $job->end_date }}</td>
-                    <td><a href="" class="text-info"> معلومات اخرى</a></td>
+                    <td><a href="{{route('job_details',$job->id)}}" class="text-info"> معلومات اخرى</a></td>
                     <td><a href="{{ route('show_clients', $job->id) }}" class="text-info"> انقر لعرض تفاصيل المتقدمين</a></td>
                     <td>
                         <a class="btn text-info" data-bs-toggle="modal"
