@@ -4,6 +4,7 @@
 use App\Http\Controllers\admin\CitiesController;
 use App\Http\Controllers\admin\CompaniesController;
 use App\Http\Controllers\admin\jobsController;
+use App\Http\Controllers\admin\PartinersController;
 use App\Http\Controllers\admin\UsersController;
 use App\Http\Controllers\admin\UsersJobsController;
 use App\Http\Controllers\Authentication\ActiveUserController;
@@ -71,6 +72,16 @@ Route::group([
                 Route::get('/delete_company/{id}', 'delete')->name('delete_company');
             });
             // End Companies
+
+            // Satrt Partiners 
+            Route::controller(PartinersController::class)->group(function () {
+                Route::get('/partiners', 'show')->name('partiners');
+                Route::post('/add_partiner', 'add')->name('add_partiner');
+                Route::post('/update_partiner/{id}', 'update')->name('update_partiner');
+                Route::get('/active_partiner/{id}', 'active')->name('active_partiner');
+                Route::get('/delete_partiner/{id}', 'delete')->name('delete_partiner');
+            });
+            // End Partiners
 
             // Satrt Cities 
             Route::controller(CitiesController::class)->group(function () {

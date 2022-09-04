@@ -52,7 +52,7 @@
                         <a class="nav-link {{ request()->routeIs('contact_us') ? 'active' : ''}}" href="{{route('contact_us')}}">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->routeIs('partiner') ? 'active' : ''}}" href="{{route('partiner')}}">Members</a>
+                        <a class="nav-link {{ request()->routeIs('partiner') ? 'active' : ''}}" href="{{route('partiner')}}">Partiners</a>
                     </li>
                 </ul>
                 <div class="acount">
@@ -79,15 +79,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-3">
-                    <a class="logo" href="#">Jobhunt</a>
+                    <a class="logo" >JobHunt</a>
                     <p>The most trusted source for jobs.</p>
-                    <div class="icon">
-                        <i class="fab fa-facebook-f" style="color: white"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-instagram" style="background-color: #db2f6a; border-radius: 7px"></i>
-                        <i class="fab fa-linkedin-in"></i>
-                        <i class="fab fa-snapchat-ghost"></i>
-                        <i class="fab fa-tiktok"></i>
+                    <div class="icon fs-4">
+                        <i class="fab fa-facebook-f p-1"></i>
+                        <i class="fab fa-twitter p-1"></i>
+                        <i class="fab fa-instagram p-1" style="border-radius: 7px"></i>
+                        <i class="fab fa-linkedin-in p-1"></i>
+                        <i class="fab fa-snapchat-ghostp-1"></i>
+                        <i class="fab fa-tiktok p-1"></i>
                     </div>
                 </div>
 

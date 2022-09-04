@@ -4,6 +4,7 @@ namespace App\Http\Controllers\web;
 
 use App\Http\Controllers\Controller;
 use App\Models\Jobs;
+use App\Models\Partiners;
 use Illuminate\Http\Request;
 
 class ShowPagesController extends Controller
@@ -30,7 +31,10 @@ class ShowPagesController extends Controller
     }
 
     public function showPartener(){
-        return view("web.membership");
+        $partiners = Partiners::orderBy('id', 'DESC')->where('is_active', 1)->get();
+        return view("web.membership",[
+            'partiners' =>  $partiners
+        ]);
     }
 
     public function showContactUs(){

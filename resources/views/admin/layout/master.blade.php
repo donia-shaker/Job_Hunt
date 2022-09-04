@@ -153,7 +153,7 @@
                     </li>
 
                     <li class="menu-item ">
-                        <a href="{{ route('companies') }}" class="menu-link">
+                        <a href="{{ route('partiners') }}" class="menu-link">
                             <i class='menu-icon tf-icons bx bx-layout'></i>
                             <div>ادارة شركائنا</div>
                         </a>

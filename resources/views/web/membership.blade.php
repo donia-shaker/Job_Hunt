@@ -1,181 +1,36 @@
 @extends('web.layout.master')
 @section('content')
 
-    <!-- start member -->
-    <div class="member">
-      <div class="container">
-        <div class="row justify-content-around">
-          <div class="card mb-3" style="max-width: 540px">
+    <!-- start header -->
+    <div class="header member">
+      <h1 class="my-5 text-center h1">Know More About Our Partiner</h1>
+    </div>
+    {{-- start Partiners --}}
+    <div class="position-relative" style="top: -380px;" >
+      <div class="container py-4" style="margin-bottom: -350px;line-height:2">
+        <div class="row justify-content-around bg-white shadow">
+          @foreach ($partiners as $partiner)
+          <div class="  w-100 p-5 border-bottom" >
             <div class="row g-0">
-              <div class="col-md-4">
+              <div class="col-lg-3 px-4" >
                 <img
-                  src="/images/comp-4.jpg"
-                  class="img-fluid rounded-start"
-                  alt="..."
+                  src="{{asset("images/$partiner->image")}}"
+                  class="img-fluid shadow p-3 " style="border-radius: 40px; max-width:200px;    height: 200px; "
+                  alt="partiner_image"
                 />
               </div>
-              <div class="col-md-8">
+              <div class="col-lg-9 ml-2">
                 <div class="card-body">
-                  <h5 class="card-title">Toyota</h5>
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
+                  <h2 class="card-title ">{{$partiner->name}}</h2>
+                  <p class="card-text mt-4 fs-5">{{$partiner->information}}</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="card mb-3" style="max-width: 540px">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img
-                  src="/images/comp-1.png"
-                  class="img-fluid rounded-start"
-                  alt="..."
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Company</h5>
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3" style="max-width: 540px">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img
-                  src="/images/comp-2.jpg"
-                  class="img-fluid rounded-start"
-                  alt="..."
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Cisco</h5>
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3" style="max-width: 540px">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img
-                  src="/images/comp-3.png"
-                  class="img-fluid rounded-start"
-                  alt="..."
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Toyota</h5>
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3" style="max-width: 540px">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img
-                  src="/images/comp-4.jpg"
-                  class="img-fluid rounded-start"
-                  alt="..."
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Companis</h5>
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3" style="max-width: 540px">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img
-                  src="/images/comp-1.png"
-                  class="img-fluid rounded-start"
-                  alt="..."
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Pepci</h5>
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3" style="max-width: 540px">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img
-                  src="/images/comp-2.jpg"
-                  class="img-fluid rounded-start"
-                  alt="..."
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Cisco</h5>
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3" style="max-width: 540px">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img
-                  src="/images/comp-3.png"
-                  class="img-fluid rounded-start"
-                  alt="..."
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Toyota</h5>
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          @endforeach
         </div>
       </div>
     </div>
-    <!-- End member -->
+    <!-- End Partiners -->
 
  @endsection
