@@ -72,7 +72,7 @@
         </div>
     </div>
     <!-- End lastest Job -->
-    <div class="container my-5">
+    <div class="container my-5 py-5">
         <div class="row d-flex justify-content-md-between justify-content-center flex-wrap align-items-center">
             <div class="col">
                 <img class="mx-auto" src="/images/job-1.jpg" alt="" />
