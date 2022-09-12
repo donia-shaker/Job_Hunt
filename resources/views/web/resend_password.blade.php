@@ -33,7 +33,7 @@
                                     placeholder="email@gmail.com" id="form3Example3c" class="form-control" />
                             </div>
                             @error('email')
-                                <p class="alert alert-danger"> * {{ $message }}</p>
+                                <p class="text-danger"> * {{ $message }}</p>
                             @enderror
                         </div>
                         <p class="text-muted mt-4">*We Will Send The Link to Reset Your Password To This Email</p>

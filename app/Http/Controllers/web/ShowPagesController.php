@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\web;
 
 use App\Http\Controllers\Controller;
+use App\Models\Cities;
+use App\Models\Companies;
 use App\Models\Jobs;
 use App\Models\Partiners;
 use Illuminate\Http\Request;
@@ -18,8 +20,12 @@ class ShowPagesController extends Controller
 
     public function showJobs(){
         $jobs = Jobs::with(['company','city'])->orderBy('id', 'DESC')->where('end_date', '>', date('Y-m-d'))->where('is_active', 1)->where('status', 0)->get();
+        $cities = Cities::where('is_active', 1)->get();
+        $companies = Companies::where('is_active', 1)->get();
         return view("web.job",[
-            'Jobs'  =>  $jobs
+            'Jobs'  =>  $jobs,
+            'cities'=>  $cities,
+            'companies'=>  $companies,
         ]);
     }
 

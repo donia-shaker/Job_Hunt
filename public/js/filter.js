@@ -2,7 +2,7 @@
 $(document).ready(function () {
   $("#search").on("keyup", function () {
     var value = $(this).val().toLowerCase();
-    $(".card ").filter(function () {
+    $(".job ").filter(function () {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
     });
   });
@@ -19,7 +19,7 @@ $(document).ready(function () {
         $(this).parentsUntil("div.one").hide();
       }
       if (filter == "All") {
-        $(".card *").parentsUntil("div.one").show();
+        $(".job *").parentsUntil("div.one").show();
       }
       $("#city").val(filter);
     });
@@ -30,15 +30,15 @@ $(document).ready(function () {
 $(document).ready(function () {
   $("#company").change(function () {
     var filter = $(this).val();
-    $(".card img").each(function () {
+    $(".comp").each(function () {
       //   alert($(this).attr("data-name"));
-      if ($(this).attr("data-name") == filter) {
+      if ($(this).text() == filter) {
         $(this).parentsUntil("div.one").show();
       } else {
         $(this).parentsUntil("div.one").hide();
       }
       if (filter == "All") {
-        $(".card *").parentsUntil("div.one").show();
+        $(".job *").parentsUntil("div.one").show();
       }
       $("#company").val(filter);
     });

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/dashboard.css" />
     @livewireStyles
-    <title>Job Finder</title>
+    <title>JOBHunt</title>
 </head>
 
 <body>
@@ -30,7 +30,7 @@
                     </a>
                     <div class=" text-center my-3">
                         <span class=" text-center "
-                            style="color: yellow;font-size: 30px;font-weight: 600;">JobHunt</span>
+                            style="color: yellow;font-size: 30px;font-weight: 600;">JOBHunt</span>
                     </div>
                     <ul class="nav nav-pills my-2 fs-6 flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
                         id="menu">

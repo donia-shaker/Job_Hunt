@@ -25,7 +25,7 @@
                                                     class="form-control" value="{{ old('name') }}" />
                                             </div>
                                             @error('name')
-                                                <p class="alert alert-danger"> * {{ $message }}</p>
+                                                <p class="text-danger"> * {{ $message }}</p>
                                             @enderror
                                         </div>
 
@@ -37,7 +37,7 @@
                                                     id="form3Example3c" class="form-control" />
                                             </div>
                                             @error('email')
-                                                <p class="alert alert-danger"> * {{ $message }}</p>
+                                                <p class="text-danger"> * {{ $message }}</p>
                                             @enderror
                                         </div>
 
@@ -45,11 +45,11 @@
                                             <i class="fas fa-lock fa-lg me-2 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
                                                 <label class="form-label" for="form3Example4c">Password</label>
-                                                <input type="text" name="password" id="form3Example4c"
+                                                <input type="password" name="password" id="form3Example4c"
                                                     class="form-control" />
                                             </div>
                                             @error('password')
-                                                <p class="alert alert-danger"> * {{ $message }}</p>
+                                                <p class="text-danger"> * {{ $message }}</p>
                                             @enderror
                                         </div>
 
@@ -57,11 +57,11 @@
                                             <i class="fas fa-key fa-lg me-2 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
                                                 <label class="form-label" for="form3Example4cd">Repeat your password</label>
-                                                <input name="confirm_pass" type="text" id="form3Example4cd"
+                                                <input name="confirm_pass" type="password" id="form3Example4cd"
                                                     class="form-control" />
                                             </div>
                                             @error('confirm_pass')
-                                                <p class="alert alert-danger"> * {{ $message }}</p>
+                                                <p class="text-danger"> * {{ $message }}</p>
                                             @enderror
                                         </div>
 

@@ -21,14 +21,14 @@
     <link rel="stylesheet" href="{{ asset('css/about-us.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/contact-us.css') }}" />
 
-    <title>Job Finder</title>
+    <title>JOBHunt</title>
 </head>
 
 <body>
     <!-- Start Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bd-blue-800 fixed-top shadow">
         <div class="container">
-            <a class="navbar-brand logo" href="#">JobHunt</a>
+            <a class="navbar-brand logo" href="#">JOBHunt</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -61,16 +61,20 @@
                 </div>
                 <!-- profile -->
                 <div class="dropdown mt-4 mx-2 pb-4">
-                    <a href="#" class="d-flex align-items-center text-white text-decoration-none ">
-                        <img src="/images/personal.png" alt="hugenerd" width="30" height="30"
-                            class="rounded-circle" />
+                    <a href="{{route('login')}}" class="d-flex align-items-center text-white text-decoration-none ">
+                            @if (isset(Auth::user()->personalInfo->avatar))
+                            <img src="/images/{{Auth::user()->personalInfo->avatar}}" alt="hugenerd" width="30"
+                                height="30" class="rounded-circle" />
+                        @else
+                            <img src="{{ asset('images/default_image.png') }}" alt="hugenerd" width="30"
+                                height="30" class="rounded-circle" />
+                        @endif
                     </a>
                 </div>
             </div>
         </div>
     </nav>
     <!-- End  Navbar-->
-
 
     @yield('content')
 
@@ -79,7 +83,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-3">
-                    <a class="logo" >JobHunt</a>
+                    <a class="logo" >JOBHunt</a>
                     <p>The most trusted source for jobs.</p>
                     <div class="icon fs-4">
                         <i class="fab fa-facebook-f p-1"></i>
@@ -176,11 +180,12 @@
         </div>
     </footer>
     <!-- End Footer -->
+    <script src="{{ asset('js/jquery-main.js') }}"></script>
+    <script src="{{ asset('js/filter.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-    <script src="{{ asset('js/jquery-main.js') }}"></script>
-    <script src="{{ asset('js/filter.js') }}"></script>
+    
 </body>
 
 </html>

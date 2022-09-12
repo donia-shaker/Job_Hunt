@@ -91,7 +91,7 @@
                         <span class=" text-center"
                             style="color: yellow;
     font-size: 30px;
-    font-weight: 600;">JobHunt</span>
+    font-weight: 600;">JOBHunt</span>
                     </a>
 
                     <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
