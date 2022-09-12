@@ -40,31 +40,34 @@
                         </td>
                         <td>
                             @if ($company->is_active)
-                                <a class="btn btn-icon text-info btn-outline-info mx-1 " data-bs-toggle="modal" data-bs-target="#activeModal{{$company->id}}">
+                                <a class="btn btn-icon text-info btn-outline-info mx-1 " data-bs-toggle="modal"
+                                    data-bs-target="#activeModal{{ $company->id }}">
                                     <i class="bx bx-show"></i>
                                 </a>
                             @else
-                                <a class="btn btn-icon btn-outline-secondary mx-1 " data-bs-toggle="modal" data-bs-target="#activeModal{{$company->id}}">
+                                <a class="btn btn-icon btn-outline-secondary mx-1 " data-bs-toggle="modal"
+                                    data-bs-target="#activeModal{{ $company->id }}">
                                     <i class="bx bx-hide "></i>
                                 </a>
                             @endif
-                            <x-modal id='activeModal{{$company->id}}'>
+                            <x-modal id='activeModal{{ $company->id }}'>
                                 <x-slot name='title'>حالة الشركة</x-slot>
                                 <x-slot name='message'>هل انت متاكد انك تريد تغيير حالة الشركة</x-slot>
-                                <x-slot name='link'>{{route('active_company',$company->id)}}</x-slot>
+                                <x-slot name='link'>{{ route('active_company', $company->id) }}</x-slot>
                                 <x-slot name='action'>تغيير حالة الشركة</x-slot>
                             </x-modal>
                             <a href="companies?do=Edit&Id={{ $company->id }}"
                                 class="btn btn-icon btn-outline-success mx-1">
                                 <i class="tf-icons bx bx-edit-alt me-1"></i>
                             </a>
-                                <a class="btn btn-icon btn-outline-dribbble text-danger" data-bs-toggle="modal" data-bs-target="#deleteModal{{$company->id}}">
-                                    <i class="tf-icons bx bx-trash me-1"></i>
-                                </a>
-                            <x-modal id='deleteModal{{$company->id}}'>
+                            <a class="btn btn-icon btn-outline-dribbble text-danger" data-bs-toggle="modal"
+                                data-bs-target="#deleteModal{{ $company->id }}">
+                                <i class="tf-icons bx bx-trash me-1"></i>
+                            </a>
+                            <x-modal id='deleteModal{{ $company->id }}'>
                                 <x-slot name='title'>حذف الشركة</x-slot>
                                 <x-slot name='message'>هل انت متاكد انك تريد حذف بيانات الشركة</x-slot>
-                                <x-slot name='link'>{{route('delete_company',$company->id)}}</x-slot>
+                                <x-slot name='link'>{{ route('delete_company', $company->id) }}</x-slot>
                                 <x-slot name='action'> حذف الشركة</x-slot>
                             </x-modal>
                         </td>
@@ -140,21 +143,21 @@
         {{-- End Add Company --}}
     @elseif ($do == 'Edit')
         {{-- Start Edit Company --}}
-        <x-form action="{{ route('update_company',$company->id) }}">
+        <x-form action="{{ route('update_company', $company->id) }}">
             <x-slot name='title'> تعديل معلومات الشركة</x-slot>
             <x-slot name='formInput'>
                 <div class="col-md-6 my-2">
                     <label class="form-label fs-6" for="multicol-username"> اسم الشركة (AR)</label>
-                    <input name="nameAR" value="{{$company->getTranslation('name', 'ar')}}" type="text" id="multicol-username"
-                        class="form-control" />
+                    <input name="nameAR" value="{{ $company->getTranslation('name', 'ar') }}" type="text"
+                        id="multicol-username" class="form-control" />
                     @error('nameAR')
                         <span class="text-end text-danger">* {{ $message }} </span>
                     @enderror
                 </div>
                 <div class="col-md-6 my-2">
                     <label class="form-label fs-6" for="multicol-username"> اسم الشركة (EN)</label>
-                    <input name="nameEN" value="{{ $company->getTranslation('name', 'en') }}" type="text" id="multicol-username"
-                        class="form-control" />
+                    <input name="nameEN" value="{{ $company->getTranslation('name', 'en') }}" type="text"
+                        id="multicol-username" class="form-control" />
                     @error('nameEN')
                         <span class="text-end text-danger">* {{ $message }} </span>
                     @enderror
@@ -162,8 +165,8 @@
 
                 <div class="col-md-6 my-2">
                     <label class="form-label fs-6" for="multicol-username"> العنوان (AR)</label>
-                    <input name="addressAR" value="{{ $company->getTranslation('address', 'ar') }}" type="text" id="multicol-username"
-                        class="form-control" />
+                    <input name="addressAR" value="{{ $company->getTranslation('address', 'ar') }}" type="text"
+                        id="multicol-username" class="form-control" />
                     @error('addressAR')
                         <span class="text-end text-danger">* {{ $message }} </span>
                     @enderror
@@ -171,8 +174,8 @@
 
                 <div class="col-md-6 my-2">
                     <label class="form-label fs-6" for="multicol-username"> العنوان (EN)</label>
-                    <input name="addressEN" value="{{$company->getTranslation('address', 'en') }}" type="text" id="multicol-username"
-                        class="form-control" />
+                    <input name="addressEN" value="{{ $company->getTranslation('address', 'en') }}" type="text"
+                        id="multicol-username" class="form-control" />
                     @error('addressEN')
                         <span class="text-end text-danger">* {{ $message }} </span>
                     @enderror
@@ -190,7 +193,7 @@
                 <div class="col-md-6 my-2">
                     <label class="form-label fs-6" for="multicol-email">صورة </label>
                     <div class="input-group input-group-merge">
-                        <input name="image" value="{{ $company->image}}" type="file" class="form-control"
+                        <input name="image" value="{{ $company->image }}" type="file" class="form-control"
                             oninput="previewImage.src=window.URL.createObjectURL(this.files[0])"
                             aria-describedby="multicol-email2" />
                     </div>
