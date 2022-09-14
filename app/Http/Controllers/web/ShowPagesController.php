@@ -30,7 +30,7 @@ class ShowPagesController extends Controller
     }
 
     public function showDetailes($id){
-        $job = Jobs::where('id',$id)->with(['company','city'])->orderBy('id', 'DESC')->where('end_date', '>', date('Y-m-d'))->where('is_active', 1)->where('status', 0)->first();
+        $job = Jobs::where('id',$id)->with(['company','city'])->orderBy('id', 'DESC')->first();
         return view("web.details",[
             'job' => $job
         ]);
