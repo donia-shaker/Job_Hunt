@@ -44,6 +44,9 @@
                                 <x-slot name='message'>هل انت متاكد انك تريد تغيير حالة المدينة</x-slot>
                                 <x-slot name='link'>{{route('active_city',$city->id)}}</x-slot>
                                 <x-slot name='action'>تغيير حالة المدينة</x-slot>
+                                <x-slot name='action'>
+                                    <button type="button" class="btn btn-danger"> تغيير حالة المدينة</button>
+                                </x-slot>
                             </x-modal>
                             <a href="cities?do=Edit&Id={{ $city->id }}"
                                 class="btn btn-icon btn-outline-success mx-1">
@@ -56,7 +59,9 @@
                                 <x-slot name='title'>حذف المدينة</x-slot>
                                 <x-slot name='message'>هل انت متاكد انك تريد حذف بيانات المدينة</x-slot>
                                 <x-slot name='link'>{{route('delete_city',$city->id)}}</x-slot>
-                                <x-slot name='action'> حذف المدينة</x-slot>
+                                <x-slot name='action'>
+                                    <button type="button" class="btn btn-danger"> حذف المدينة</button>
+                                </x-slot>
                             </x-modal>
                         </td>
                     </tr>

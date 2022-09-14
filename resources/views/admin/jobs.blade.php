@@ -55,7 +55,9 @@
                                 <x-slot name='title'>حالة الوظيفة</x-slot>
                                 <x-slot name='message'>هل انت متاكد انك تريد تغيير حالة الوظيفة</x-slot>
                                 <x-slot name='link'>{{route('active_job',$job->id)}}</x-slot>
-                                <x-slot name='action'>تغيير حالة الوظيفة</x-slot>
+                                <x-slot name='action'>
+                                    <button type="button" class="btn btn-danger"> تغيير حالة الوظيفة</button>
+                                </x-slot>
                             </x-modal>
                             <a href="jobs?do=Edit&Id={{ $job->id }}"
                                 class="btn btn-icon btn-outline-success mx-1">
@@ -68,7 +70,9 @@
                                 <x-slot name='title'>حذف الوظيفة</x-slot>
                                 <x-slot name='message'>هل انت متاكد انك تريد حذف بيانات الوظيفة</x-slot>
                                 <x-slot name='link'>{{route('delete_job',$job->id)}}</x-slot>
-                                <x-slot name='action'> حذف الوظيفة</x-slot>
+                                <x-slot name='action'>
+                                    <button type="button" class="btn btn-danger"> حذف الوظيفة</button>
+                                </x-slot>
                             </x-modal>
                         </td>
                     </tr>

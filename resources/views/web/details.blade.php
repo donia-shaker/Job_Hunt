@@ -58,7 +58,10 @@
         <x-slot name='title'>Apply For Job</x-slot>
         <x-slot name='message'> Are you sure you want to apply for this job?</x-slot>
         <x-slot name='link'>{{ route('apply_job', $job->id) }}</x-slot>
-        <x-slot name='action'>Yes, Apply</x-slot>
+        <x-slot name='action'>
+            <button type="button" class="btn btn-primary" 
+            style="background-color: rgb(5 44 101) !important;">Yes, Apply</button>
+        </x-slot>
     </x-modal>
     {{-- End Apply Modal --}}
 
@@ -67,7 +70,9 @@
         <x-slot name='title'></x-slot>
         <x-slot name='message'> You Must First Login To Your Account...</x-slot>
         <x-slot name='link'>{{ route('login') }}</x-slot>
-        <x-slot name='action'>Go To Login</x-slot>
+        <x-slot name='action'>
+            <button type="button" class="btn btn-danger">Go To Login</button>
+        </x-slot>
     </x-modal>
     {{-- End Error Modal --}}
 

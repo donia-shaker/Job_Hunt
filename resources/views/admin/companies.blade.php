@@ -54,7 +54,9 @@
                                 <x-slot name='title'>حالة الشركة</x-slot>
                                 <x-slot name='message'>هل انت متاكد انك تريد تغيير حالة الشركة</x-slot>
                                 <x-slot name='link'>{{ route('active_company', $company->id) }}</x-slot>
-                                <x-slot name='action'>تغيير حالة الشركة</x-slot>
+                                <x-slot name='action'>
+                                    <button type="button" class="btn btn-danger"> تغيير حالة الشركة</button>
+                                </x-slot>
                             </x-modal>
                             <a href="companies?do=Edit&Id={{ $company->id }}"
                                 class="btn btn-icon btn-outline-success mx-1">
@@ -68,7 +70,9 @@
                                 <x-slot name='title'>حذف الشركة</x-slot>
                                 <x-slot name='message'>هل انت متاكد انك تريد حذف بيانات الشركة</x-slot>
                                 <x-slot name='link'>{{ route('delete_company', $company->id) }}</x-slot>
-                                <x-slot name='action'> حذف الشركة</x-slot>
+                                <x-slot name='action'>
+                                    <button type="button" class="btn btn-danger"> حذف الشركة</button>
+                                </x-slot>
                             </x-modal>
                         </td>
                     </tr>

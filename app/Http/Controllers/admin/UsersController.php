@@ -38,4 +38,12 @@ class UsersController extends Controller
             'error'   => CRUDMessages::MESSAGE_ACTIVE_ERROR,
         ]);
     }
+
+    public function delete($id){
+        $user=User::find($id);
+        if ($user->delete())
+        return redirect()->back()->with([
+            'success'   => CRUDMessages::MESSAGE_DELETE_SUCCESS,
+        ]);
+    }
 }

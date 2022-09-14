@@ -48,8 +48,21 @@
                             <x-slot name='title'>حالة المستخدم</x-slot>
                             <x-slot name='message'>هل انت متاكد انك تريد تغيير حالة المستخدم</x-slot>
                             <x-slot name='link'>{{ route('active_user', $user->id) }}</x-slot>
-                            <x-slot name='action'>تغيير حالة المستخدم</x-slot>
+                            <x-slot name='action'>
+                                <button type="button" class="btn btn-danger"> تغيير حالة المستخدم</button>
+                            </x-slot>
                         </x-modal>
+                        <a class="btn btn-icon btn-outline-dribbble text-danger" data-bs-toggle="modal" data-bs-target="#deleteModal{{$user->id}}">
+                            <i class="tf-icons bx bx-trash me-1"></i>
+                        </a>
+                    <x-modal id='deleteModal{{$user->id}}'>
+                        <x-slot name='title'>حذف المستخدم</x-slot>
+                        <x-slot name='message'>هل انت متاكد انك تريد حذف بيانات المستخدم</x-slot>
+                        <x-slot name='link'>{{route('delete_user',$user->id)}}</x-slot>
+                        <x-slot name='action'>
+                            <button type="button" class="btn btn-danger"> حذف المستخدم</button>
+                        </x-slot>
+                    </x-modal>
                     </td>
                 </tr>
             @endforeach

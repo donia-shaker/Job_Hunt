@@ -38,7 +38,11 @@
                             <x-slot name='title'> تعيين الوظيفة كمكتملة</x-slot>
                             <x-slot name='message'>هل انت متاكد انك تريد نقل الوظيفة الى الوظائف المكتملة</x-slot>
                             <x-slot name='link'>{{ route('status_job', $job->id) }}</x-slot>
-                            <x-slot name='action'> نقل الوظيفة</x-slot>
+                            <x-slot name='action'>
+                                <button type="button" class="btn btn-primary" style="background-color: rgb(5 44 101) !important;">
+                                    نقل الوظيفة
+                                </button>
+                            </x-slot>
                         </x-modal>
                     </td>
                 </tr>

@@ -12,8 +12,7 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">الغاء</button>
           <a href="{{$link}}">
-          <button type="button" class="btn btn-primary" 
-          style="background-color: rgb(5 44 101) !important;">{{$action}}</button>
+            {{$action}}
         </a>
         </div>
       </form>
