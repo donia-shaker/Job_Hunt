@@ -3,7 +3,7 @@
 // use App\Http\Controllers\admin\AuthController;
 use App\Http\Controllers\admin\CitiesController;
 use App\Http\Controllers\admin\CompaniesController;
-use App\Http\Controllers\admin\jobsController;
+use App\Http\Controllers\admin\JobsController;
 use App\Http\Controllers\admin\PartinersController;
 use App\Http\Controllers\admin\UsersController;
 use App\Http\Controllers\admin\UsersJobsController;
@@ -94,7 +94,7 @@ Route::group([
             // End Cities
 
             // Satrt Jobs 
-            Route::controller(jobsController::class)->group(function () {
+            Route::controller(JobsController::class)->group(function () {
                 Route::get('/jobs', 'show')->name('jobs');
                 Route::get('/ended_jobs', 'show')->name('ended_jobs');
                 Route::get('/complated_jobs', 'show')->name('complated_jobs');
