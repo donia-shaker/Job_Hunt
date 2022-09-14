@@ -33,6 +33,7 @@
                 </div> --}}
             </div>
         </div>
+    </div>
         <!-- End Search Job -->
 
         <!-- Start Jobs Cards -->

@@ -79,7 +79,7 @@
     @yield('content')
 
     <!-- start footer -->
-    <footer class="py-5">
+    <footer class="py-5 position-relative">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-3">
