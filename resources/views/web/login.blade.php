@@ -17,14 +17,14 @@
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
                         class="img-fluid w-75 " alt="Phone image" />
                 </div>
-                <div class="col-md-10 col-lg-6 col-xl-5 pt-md-5 order-2 mt-0 mt-xl-5 mb-5">
+                <div class="col-md-10 col-lg-6 col-xl-5 pt-md-3 order-2 mt-0 mt-xl-5 mb-5">
                     <p class="text-center h1 fw-bold pt-5 mb-3 mx-1 mx-md-4 my-2 ">
                         Login
                     </p>
                     <form action="{{ route('login_info') }}" method="POST">
                         @csrf
                         <!-- Email input -->
-                        <div class="d-flex flex-row align-items-center mb-2">
+                        <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-envelope fa-lg me-2 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
                                 <label class="form-label" for="form3Example3c">Your Email</label>
@@ -37,7 +37,7 @@
                         </div>
 
                         <!-- Password input -->
-                        <div class="d-flex flex-row align-items-center mb-2">
+                        <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-lock fa-lg me-2 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
                                 <label class="form-label" for="form3Example4c">Password</label>

@@ -96,8 +96,8 @@
                     </div>
                 </div>
 
-                <div class="boxes col-md-8  col-lg-9 p-sm-3">
-                    <div class="row">
+                <div class="boxes col-md-8  col-lg-9 px-sm-3">
+                    <div class="row m-auto">
                         <div class="box col-6 col-lg-3 py-2">
                             <h5>TOP CATEGORIES</h5>
                             <ul class="list-group list-group-flush">
