@@ -6,14 +6,14 @@
             <x-slot name="type">primary</x-slot>
         </x-messages>
         <div class="row justify-content-around">
-            <div class="card mb-5 border-0 d-flex justify-content-around align-items-center" style="max-width: 600px">
-                <div class="row g-0">
+            <div class="card col-md-8 mb-5 border-0 d-flex justify-content-around align-items-center" style="max-width: 600px">
+                <div class="row g-0 justify-content-between">
                     <div class="col-md-4" style="height: 160px">
                         <?php $image = $job->company->image; ?>
                         <img src="{{ asset("images/$image") }}"
-                            class="img-fluid rounded-start img-thumbnail shadow p-4 h-100 " alt="company_image" />
+                            class="img-thumbnail shadow p-4 h-100 " style="border-radius: 10px; max-width:200px;    height: 200px; " alt="company_image" />
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-7">
                         <div class="card-body">
                             <span class="text-warning">Part Time</span>
                             <i class="fas fa-star text-warning"></i>

@@ -10,17 +10,17 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
-                <img src="/images/slide-1.jpeg" class="d-block w-100" alt="..." />
+                <img src="/images/slide-1.jpeg" class="d-block w-100" alt="slider-image" />
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="/images/slide-2.jpeg" class="d-block" />
+                <img src="/images/slide-2.jpeg" class="d-block" alt="slider-image"/>
             </div>
             <div class="carousel-item">
-                <img src="/images/slide-3.jpeg" class="d-block" />
+                <img src="/images/slide-3.jpeg" class="d-block" alt="slider-image"/>
             </div>
         </div>
         <div class="overlay"></div>
-        <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-caption position-absolute w-100" style="left: 0px">
             <h2>The Easiest Way to Get Your New Job</h2>
             <p>Find Jobs, Employment & Career Opportunities.</p>
         </div>
@@ -37,8 +37,8 @@
 
     <!-- start lastest Job -->
     <div class="jobs bg-light">
-        <div class="container my-5 ">
-            <h2 class="my-5 bg-primary p-3 w-25 text-center mx-auto rounded-pill text-white shadow">
+        <div class="container py-5 ">
+            <h2 class="my-5 bg-primary p-3 w-25 text-center mx-auto text-white shadow" style="border-radius: 40px; min-width:250px">
                 Last Jobs
             </h2>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-md-5">
@@ -65,31 +65,23 @@
                 @endforeach
             </div>
             <a href="{{route('all_jobs')}}">
-                <button class="my-1 bg-primary p-2 w-25 fs-4 rounded-pill text-white shadow border-0 mt-5 position-relative top-50 start-50 translate-middle">
+                <button class="my-1 bg-primary p-3 w-25 fs-4 text-white shadow border-0 mt-5 position-relative top-50 start-50 translate-middle" style="border-radius: 40px; min-width:250px">
                     More
                 </button>
             </a>
         </div>
     </div>
     <!-- End lastest Job -->
-    <div class="container my-5 py-5">
-        <div class="row d-flex justify-content-md-between justify-content-center flex-wrap align-items-center">
-            <div class="col">
-                <img class="mx-auto" src="/images/job-1.jpg" alt="" />
+    <div class="bg-light">
+    <div class="container py-5">
+        <div class="row d-flex justify-content-center m-auto flex-nowrap align-items-center py-5" style="overflow-x: scroll;">
+            @foreach ($partiners as $partiner)
+            <div class="col text-center">
+                <img class="mx-auto" src="{{asset("images/$partiner->image")}}" alt="" style="width:150px"/>
             </div>
-            <div class="col">
-                <img src="/images/job-2.jpg" alt="" />
-            </div>
-            <div class="col">
-                <img src="/images/job-3.jpg" alt="" />
-            </div>
-            <div class="col">
-                <img src="/images/job-4.png" style="width: 150px" alt="" />
-            </div>
-            <div class="col">
-                <img src="/images/job-3.jpg" alt="" />
-            </div>
+            @endforeach
         </div>
     </div>
+</div>
     <!-- Start Footer -->
 @endsection

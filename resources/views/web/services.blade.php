@@ -2,10 +2,10 @@
 @section('content')
     <!-- Start Services Upper Part -->
     <div class="srv-upper-part">
-      <div class="container px-md-5">
-        <div class="row align-items-center justify-content-evenly">
-          <div class="col text-left">
-            <h3 class="mb-5 fs-1">Services we offer</h3>
+      <div class="container ">
+        <div class="row align-items-center m-0 justify-content-between w-100">
+          <div class="col-12 col-md-6 text-center text-md-left">
+            <h1 class="mb-5 h1 pt-1" style="font-size: 38px;">Services we offer</h1>
             <p>
               We truly care about our users and our product. We are dedicated to
               providing you with the best experience possible.
@@ -15,10 +15,10 @@
               out to do.
             </p>
           </div>
-          <div class="col image">
+          <div class="col-12 col-md-6 image">
             <img
               src="/images/services.jpg"
-              class="w-75"
+              class="w-100"
               alt=""
             />
           </div>

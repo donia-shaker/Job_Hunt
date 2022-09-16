@@ -4,7 +4,7 @@
     <div class="about-upper-part text-center">
       <div class="container">
         <div class="title-text pb-5 my-5">
-          <h1 >About Us</h1>
+          <h1 class="pt-1 text-center h1">About Us</h1>
           <p>Millions of jobs, finds the one that's right for you</p>
         </div>
         <div class="row px-5">
@@ -25,10 +25,10 @@
     <!-- End title -->
 
     <!-- Start Middel Part -->
-    <div class="part-middel my-6">
-      <div class="container text-center">
+    <div class="part-middel my-6 p-3 ">
+      <div class="container text-center ">
         <h2 class="my-5">What Our Clients Say About Us</h2>
-        <div class="row justify-content-evenly">
+        <div class="row justify-content-evenly flex-wrap ">
           <div
             class="profile-card col-md-3 text-center shadow bg-light p-4 my-5 rounded-3"
           >
@@ -89,7 +89,7 @@
     <!-- end middel part -->
 
     <!-- start team part -->
-    <div class="team my-6">
+    <div class="team my-6 p-3">
       <div class="container text-center my-5">
         <h3 class="my-6">Our Creative Team</h3>
         <div class="row justify-content-evenly  flex-wrap">

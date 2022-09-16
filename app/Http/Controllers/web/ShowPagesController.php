@@ -13,8 +13,10 @@ class ShowPagesController extends Controller
 {
     public function showHome(){
         $jobs = Jobs::with(['company','city'])->orderBy('id', 'DESC')->where('end_date', '>', date('Y-m-d'))->where('is_active', 1)->where('status', 0)->take(6)->get();
+        $partiners= Partiners::where('is_active', 1)->get();
         return view("web.index",[
-        'jobs'   =>   $jobs
+        'jobs'   =>   $jobs,
+        'partiners' =>  $partiners
         ]);
     }
 

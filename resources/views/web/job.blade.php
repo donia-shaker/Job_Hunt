@@ -4,7 +4,7 @@
         <img src="{{ asset('images/jobs-bg.PNG') }}" style="height: 100vh" class="card-img" alt="...">
         <div class="card-img-overlay " style="background-color: #052c6578">
             <div class=" job-page-content text-center">
-                <h1 class="card-title  mb-5" style="margin-top: 180px">Start Search For Your Job</h1>
+                <h1 class="card-title fs-1 mb-5" style="margin-top: 180px">Start Search For Your Job</h1>
                 <div class="d-flex justify-content-center">
                     <input id="search" class="form-control text-white me-2 w-50 py-3" style="background-color: #052c6578"
                         type="search" placeholder="Search" aria-label="Search" />
