@@ -30,7 +30,7 @@
         <div class="container">
             <a class="navbar-brand logo" href="#">JOBHunt</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                data-bs-target="#navbarSupportedContent" style="margin-right: 60px" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
@@ -55,12 +55,14 @@
                         <a class="nav-link {{ request()->routeIs('partiner') ? 'active' : ''}}" href="{{route('partiner')}}">Partiners</a>
                     </li>
                 </ul>
-                <div class="acount">
+                <div class="acount  pb-4 pb-lg-0">
                     <a href="{{route('login')}}" class="me-2 {{ request()->routeIs('login') ? 'active' : 'text-white'}}"><i class="fas fa-sign-in-alt me-2"></i>Login</a>
                     <a href="{{route('register')}}" class=" me-2 {{ request()->routeIs('register') ? 'active' : 'text-white'}}"><i class="fas fa-user"></i> Signup</a>
                 </div>
                 <!-- profile -->
-                <div class="dropdown mt-4 mx-2 pb-4">
+                
+            </div>
+            <div class="dropdown mt-4 mx-2 pb-4 profile" >
                     <a href="{{route('login')}}" class="d-flex align-items-center text-white text-decoration-none ">
                             @if (isset(Auth::user()->personalInfo->avatar))
                             <img src="/images/{{Auth::user()->personalInfo->avatar}}" alt="hugenerd" width="30"
@@ -70,7 +72,6 @@
                                 height="30" class="rounded-circle" />
                         @endif
                     </a>
-                </div>
             </div>
         </div>
     </nav>
@@ -82,7 +83,7 @@
     <footer class="py-5 position-relative">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-md-3">
+                <div class="col-xs-12 text-center pb-5 col-md-4 col-lg-3">
                     <a class="logo" >JOBHunt</a>
                     <p>The most trusted source for jobs.</p>
                     <div class="icon fs-4">
@@ -95,9 +96,9 @@
                     </div>
                 </div>
 
-                <div class="boxes col-md-9">
+                <div class="boxes col-md-8  col-lg-9 p-sm-3">
                     <div class="row">
-                        <div class="box col-sm-5 col-md-5 col-lg-3 py-2">
+                        <div class="box col-6 col-lg-3 py-2">
                             <h5>TOP CATEGORIES</h5>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group">
@@ -114,7 +115,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="box col-sm-5 col-md-5 col-lg-3 py-2">
+                        <div class="box col-6 col-lg-3 py-2">
                             <h5>TOP LOCATIONS</h5>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group">
@@ -134,7 +135,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="box col-sm-5 col-md-5 col-lg-3 py-2">
+                        <div class="box col-6 col-lg-3 py-2">
                             <h5>TOP EMPLOYERS</h5>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group">
@@ -154,7 +155,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="box col-sm-5 col-md-5 col-lg-3 py-2">
+                        <div class="box col-6 col-lg-3 py-2">
                             <h5>Job Finder</h5>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group">
