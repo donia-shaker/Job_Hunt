@@ -1,7 +1,9 @@
 @extends('web.layout.master')
 @section('content')
     <!-- start sign up -->
-    <x-messages><x-slot name='type'>primary</x-slot></x-messages>
+    <x-messages>
+        <x-slot name='type'>primary</x-slot>
+    </x-messages>
     <section class="mb-5 border-0" style="margin-top: 100px">
         <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
@@ -23,10 +25,10 @@
                                                 <label class="form-label" for="form3Example1c">Your Name</label>
                                                 <input type="text" id="form3Example1c" name="name"
                                                     class="form-control" value="{{ old('name') }}" />
+                                                @error('name')
+                                                    <p class="text-danger"> * {{ $message }}</p>
+                                                @enderror
                                             </div>
-                                            @error('name')
-                                                <p class="text-danger"> * {{ $message }}</p>
-                                            @enderror
                                         </div>
 
                                         <div class="d-flex flex-row align-items-center mb-2">
@@ -35,10 +37,10 @@
                                                 <label class="form-label" for="form3Example3c">Your Email</label>
                                                 <input type="text" name="email" value="{{ old('email') }}"
                                                     id="form3Example3c" class="form-control" />
+                                                @error('email')
+                                                    <p class="text-danger"> * {{ $message }}</p>
+                                                @enderror
                                             </div>
-                                            @error('email')
-                                                <p class="text-danger"> * {{ $message }}</p>
-                                            @enderror
                                         </div>
 
                                         <div class="d-flex flex-row align-items-center mb-2">
@@ -47,10 +49,10 @@
                                                 <label class="form-label" for="form3Example4c">Password</label>
                                                 <input type="password" name="password" id="form3Example4c"
                                                     class="form-control" />
+                                                @error('password')
+                                                    <p class="text-danger"> * {{ $message }}</p>
+                                                @enderror
                                             </div>
-                                            @error('password')
-                                                <p class="text-danger"> * {{ $message }}</p>
-                                            @enderror
                                         </div>
 
                                         <div class="d-flex flex-row align-items-center mb-2">
@@ -59,21 +61,25 @@
                                                 <label class="form-label" for="form3Example4cd">Repeat your password</label>
                                                 <input name="confirm_pass" type="password" id="form3Example4cd"
                                                     class="form-control" />
+                                                @error('confirm_pass')
+                                                    <p class="text-danger"> * {{ $message }}</p>
+                                                @enderror
                                             </div>
-                                            @error('confirm_pass')
+                                        </div>
+
+                                        <div>
+                                            <div class="form-check d-flex justify-content-center mb-2">
+                                                <input class="form-check-input me-2" type="checkbox" name="privacyPolicy"
+                                                    id="form2Example3" />
+                                                <label class="form-check-label" for="form2Example3">
+                                                    I agree all statements in
+                                                    <a href="#!" class="text-primary ">Terms of service</a>
+                                                </label>
+                                            </div>
+                                            @error('privacyPolicy')
                                                 <p class="text-danger"> * {{ $message }}</p>
                                             @enderror
                                         </div>
-
-                                        <div class="form-check d-flex justify-content-center mb-2">
-                                            <input class="form-check-input me-2" type="checkbox" name="privacyPolicy"
-                                                id="form2Example3" />
-                                            <label class="form-check-label" for="form2Example3">
-                                                I agree all statements in
-                                                <a href="#!" class="text-primary ">Terms of service</a>
-                                            </label>
-                                        </div>
-
                                         <div class="d-flex justify-content-center mx-2 mb-1 mb-lg-4">
                                             <button type="submit" class="btn btn-primary w-100 my-3 btn-lg">
                                                 Register

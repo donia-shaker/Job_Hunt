@@ -34,49 +34,49 @@
             </div>
         </div>
     </div>
-        <!-- End Search Job -->
+    <!-- End Search Job -->
 
-        <!-- Start Jobs Cards -->
-        <div class=" position-relative container m-auto " style="top: -380px;">
-            <div class=" job-page-content bg-white shadow  " style="margin-bottom: -350px;">
-                <div class="jobs-cards">
-                    <!-- start card one -->
-                    @foreach ($Jobs as $job)
-                        <div class="job one col-11 w-100  border-bottom">
-                            <a href="{{ route('job_details', $job->id) }}" class="text-decoration-none">
-                                <div class="py-2 ">
-                                    <div class="row g-0">
-                                        <div class="col-md-3 m-auto px-5">
-                                            <?php $image = $job->company->image; ?>
-                                            <img src="{{ asset("images/$image") }}" alt="company_image"
-                                                class=" rounded-start img-thumbnail" />
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="card-body">
-                                                <span class="text-warning">Part Time</span>
-                                                <h5 class="card-title hover">
-                                                    {{ $job->name }}
-                                                </h5>
-                                                <p class="card-text">
-                                                    Posted 3 years ago by
-                                                    <span class="text-success comp">{{ $job->company->name }}</span>
-                                                </p>
-                                                <small class="text-muted"><i class="fas fa-map-marker-alt"></i>
-                                                    <span class="working-city">{{ $job->city->name }}</span></small>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 mt-4 px-2">
-                                            <span class="text-danger fw-bold fs-md-5">Application ends:</span>
-                                            <p class="fs-5">{{ $job->end_date }}</p>
+    <!-- Start Jobs Cards -->
+    <div class=" position-relative container m-auto " style="top: -380px;">
+        <div class=" job-page-content  bg-white p-3 " style="margin-bottom: -350px;">
+            <div class="jobs-cards">
+                <!-- start card one -->
+                @foreach ($Jobs as $job)
+                    <div class="job one col-11 w-100 bg-white mb-3  border">
+                        <a href="{{ route('job_details', $job->id) }}" class="text-decoration-none">
+                            <div class="py-2 ">
+                                <div class="row g-0 text-center text-md-start">
+                                    <div class="col-md-3 pt-2 m-auto px-5 ">
+                                        <?php $image = $job->company->image; ?>
+                                        <img src="{{ asset("images/$image") }}" alt="company_image"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row card-body " style="min-height: 115px">
+                                            <span class="text-warning ">Part Time</span>
+                                            <h5 class="card-title hover">
+                                                {{ $job->name }}
+                                            </h5>
+                                            <p class="card-text " >
+                                                Posted 3 years ago by
+                                                <span class="text-success comp">{{ $job->company->name }}</span>
+                                            </p>
+                                            <small class="text-muted "><i class="fas fa-map-marker-alt"></i>
+                                                <span class="working-city ">{{ $job->city->name }}</span>
+                                            </small>
                                         </div>
                                     </div>
+                                    <div class="col-md-3 mt-md-4 mt-0 px-2">
+                                        <span class="text-danger fw-bold fs-md-5">Application ends:</span>
+                                        <p class="fs-5">{{ $job->end_date }}</p>
+                                    </div>
                                 </div>
-                            </a>
-                        </div>
-                    @endforeach
-                </div>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
             </div>
         </div>
+    </div>
 
-        <!-- End Jobs Cards -->
-    @endsection
+    <!-- End Jobs Cards -->
+@endsection

@@ -13,7 +13,8 @@
                 <x-slot name='type'>primary</x-slot>
             </x-messages>
             <div class="row  justify-content-center align-items-center ">
-                <div class="col-md-10 col-lg-6 col-xl-6 mt-3 mt-xl-5  mb-3 d-flex justify-content-center justify-content-xl-start  align-items-center order-lg-2 ">
+                <div
+                    class="col-md-10 col-lg-6 col-xl-6 mt-3 mt-xl-5  mb-3 d-flex justify-content-center justify-content-xl-start  align-items-center order-lg-2 ">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
                         class="img-fluid w-75 " alt="Phone image" />
                 </div>
@@ -28,12 +29,12 @@
                             <i class="fas fa-envelope fa-lg me-2 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
                                 <label class="form-label" for="form3Example3c">Your Email</label>
-                                <input type="text" name="email" value="{{ old('email') }}"
-                                    id="form3Example3c" class="form-control" />
+                                <input type="text" name="email" value="{{ old('email') }}" id="form3Example3c"
+                                    class="form-control" />
+                                @error('email')
+                                    <p class="text-danger"> * {{ $message }}</p>
+                                @enderror
                             </div>
-                            @error('email')
-                                <p class="text-danger"> * {{ $message }}</p>
-                            @enderror
                         </div>
 
                         <!-- Password input -->
@@ -41,12 +42,11 @@
                             <i class="fas fa-lock fa-lg me-2 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
                                 <label class="form-label" for="form3Example4c">Password</label>
-                                <input type="password" name="password" id="form3Example4c"
-                                    class="form-control" />
+                                <input type="password" name="password" id="form3Example4c" class="form-control" />
+                                @error('password')
+                                    <p class="text-danger"> * {{ $message }}</p>
+                                @enderror
                             </div>
-                            @error('password')
-                                <p class="text-danger"> * {{ $message }}</p>
-                            @enderror
                         </div>
 
                         <div class="d-flex justify-content-around align-items-center mb-4">

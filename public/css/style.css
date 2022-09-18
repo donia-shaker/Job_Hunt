@@ -9,6 +9,7 @@
 
 body {
     overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 .color {
@@ -23,7 +24,7 @@ body {
 .navbar .logo {
     color: var(--second-color);
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 500;
 }
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-toggler,
@@ -227,6 +228,11 @@ footer li {
     font-weight: 900;
 }
 
+@media (max-width:450px) {
+    .h1 {
+    font-size: 40px;
+    }
+}
 .hover:hover {
     color: blue;
 }

@@ -3,7 +3,7 @@
 
     <!-- start header -->
     <div class="header member">
-      <h1 class="my-5 text-center h1">Know More About Our Partiner</h1>
+      <h1 class="my-5 px-2 text-center h1">Know More About Our Partiner</h1>
     </div>
     {{-- start Partiners --}}
     <div class="position-relative" style="top: -300px;" >
