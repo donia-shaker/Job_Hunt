@@ -16,7 +16,7 @@
             @foreach ($information as $info)
                 <tr>
                     <td>{{ $info->user->name }}</td>
-                    <td><a href="{{ route('CV', $info->user_id) }}" class="text-info">عرض بيانات اضافيه عن المتقدم</a></td>
+                    <td><a href="{{ route('cv', $info->user_id) }}" class="text-info">عرض بيانات اضافيه عن المتقدم</a></td>
                 </tr>
             @endforeach
         </x-slot>
